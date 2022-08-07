@@ -1,0 +1,14 @@
+def binary(l,k):
+    s=0
+    e=len(l)
+    while s<e:
+        mid=(e+s)//2
+        if(l[mid]==k):
+            return (mid+1,True)
+        elif(l[mid]>k):
+            e=mid-1
+        elif(l[mid]<k):
+            s=mid+1
+   # return False    
+            
+print(binary([1,2,3,5,6,7,8,9],10))
