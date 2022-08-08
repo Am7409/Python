@@ -9,3 +9,32 @@ def insertion(l):
 l=[5,6,3,8,2,1]
 insertion(l)
 print(l)
+
+
+
+
+
+#Q1 Solution
+def contracting(l):
+   j=0
+   dif1=abs(l[j]-l[j+1])
+   for i in range(1,len(l)-1):
+       dif2=abs(l[i]-l[i+1])
+       if dif2<dif1:
+           dif1=dif2
+       else:
+           return False
+   return True
+
+
+#Q2 Solution
+def counthv(l):
+    hill=0
+    vally=0
+    for i in range(1,len(l)-1):
+        if  l[i-1]<l[i]>l[i+1]:
+            hill+=1
+        elif l[i-1]>l[i]<l[i+1]:
+            vally+=1
+    return [hill,vally]
+
