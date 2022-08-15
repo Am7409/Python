@@ -1,0 +1,27 @@
+def creation(r,c):
+    mat=[]
+    for i in range(r):
+        a=[]
+        for j in range(c):
+            k=int(input(f"Enter mat[{i}][{j}]"))
+            a.append(k)
+        mat.append(a)
+    return mat
+
+def sum(a,b):
+    sumof=[]
+    for i in range(len(a)):  #number of rows 
+        s=[]
+        for j in range(len(a[0])):  #number of columns in the matriex
+            s.append(a[i][j]+b[i][j])
+        sumof.append(s)
+    return sumof
+    
+def mul(a,b):
+    mult=[[0,0],[0,0]]
+    for i in range(len(a)):
+        for j in range(len(a[0])):
+            for k in range(len(b)):
+                mult[i][j]+=a[i][k]*b[k][j]
+    
+    return mult
